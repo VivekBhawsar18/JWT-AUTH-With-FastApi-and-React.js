@@ -79,9 +79,8 @@ Follow the steps below to run the project locally on your machine.
 
 | Method | Endpoint       | Description                          |
 | ------ | -------------- | ------------------------------------ |
-| POST   | `/user/signup` | Register a new user                  |
-| POST   | `/user/login`  | Login and receive a JWT access token |
-| GET    | `/protected`   | Access a secure route with token     |
+| POST   | `/user/sign-up` | Register a new user                  |
+| POST   | `/user/sign-in`  | Login and receive a JWT access token |
 
 🔐 The `/protected` route requires the `Authorization: Bearer <token>` header.
 
