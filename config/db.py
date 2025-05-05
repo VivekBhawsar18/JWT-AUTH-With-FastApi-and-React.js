@@ -25,7 +25,7 @@ load_dotenv()
 MONGO_URI = os.getenv("MONGODB_CONNECTION_STRING")
 
 # Connect to MongoDB Atlas
-mongo_client = AsyncIOMotorClient(MONGODB_CONNECTION_STRING)
+mongo_client = AsyncIOMotorClient(MONGO_URI)
 db = mongo_client.get_default_database()  # Get the default database from the connection string
 
 user_details_collection = db["users"]
