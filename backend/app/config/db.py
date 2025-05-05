@@ -1,16 +1,33 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 from bson import ObjectId
 import datetime
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-# MongoDB configuration
-MONGO_HOST = "localhost"
-MONGO_PORT = 27017
-MONGO_DB = "authentication"
-# MONGO_COLLECTION = "users"
+# MongoDB configuration For local development
 
-# Connect to MongoDB
-mongo_client = AsyncIOMotorClient(f"mongodb://{MONGO_HOST}:{MONGO_PORT}")
-db = mongo_client[MONGO_DB]
+# # MongoDB configuration
+# MONGO_HOST = "localhost"
+# MONGO_PORT = 27017
+# MONGO_DB = "authentication"
+# # MONGO_COLLECTION = "users"
+
+# # Connect to MongoDB
+# mongo_client = AsyncIOMotorClient(f"mongodb://{MONGO_HOST}:{MONGO_PORT}")
+# db = mongo_client[MONGO_DB]
+# user_details_collection = db["users"]
+# blacklisted_tokens_collection = db["blacklisted_tokens"]
+
+# MongoDB configuration For MongoDb Atlas development
+
+# Atlas connection string
+MONGO_URI = os.getenv("MONGO_URI")
+
+# Connect to MongoDB Atlas
+mongo_client = AsyncIOMotorClient(MONGO_URI)
+db = mongo_client.get_default_database()  # Get the default database from the connection string
+
 user_details_collection = db["users"]
 blacklisted_tokens_collection = db["blacklisted_tokens"]
 
