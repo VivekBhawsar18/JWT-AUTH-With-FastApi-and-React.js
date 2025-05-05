@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { TokenContext } from '../context/context';
 
+
 export const SignIn = () => {
 
     const { dispatch } = useContext(TokenContext);
@@ -28,7 +29,7 @@ export const SignIn = () => {
         }
         else {
 
-            axios.post('http://localhost:8000/user/sign-in', formData)
+            axios.post('/user/sign-in', formData)
                 .then((res) => {
 
                     const statusCode = res.data.status_code; // Check the status code from the backend

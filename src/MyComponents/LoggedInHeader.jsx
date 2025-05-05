@@ -7,6 +7,7 @@ export const LoggedInHeader = ({ handleLogin }) => {
 
     const navigate = useNavigate();
 
+
     const { dispatch } = useContext(TokenContext);
     const { state } = useContext(TokenContext);
     const { token } = state; // Access the token value from the state object
@@ -15,7 +16,7 @@ export const LoggedInHeader = ({ handleLogin }) => {
         e.preventDefault();
 
         axios
-            .post('http://localhost:8000/token/blacklist', {
+            .post('/token/blacklist', {
                 "token": token
             })
             .then((res) => {

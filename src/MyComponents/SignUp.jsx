@@ -30,7 +30,7 @@ export const SignUp = () => {
         e.preventDefault();
 
         axios
-            .post('http://localhost:8000/user/sign-up', formData)
+            .post('/user/sign-up', formData)
             .then((res) => {
 
                 const statusCode = res.status; // Check the status code from the backend

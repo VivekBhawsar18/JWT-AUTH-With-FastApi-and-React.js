@@ -12,7 +12,7 @@ export const Welcome = () => {
 
     // Read all Todos
     useEffect(() => {
-        axios.get('http://localhost:8000/test/users/all', {
+        axios.get('/test/users/all', {
             headers: {
                 'Authorization': `Bearer ${token}`,
             },
