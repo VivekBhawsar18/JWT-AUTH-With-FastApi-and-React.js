@@ -9,7 +9,7 @@ from auth.auth_bearer import JWTBearer
 
 app = FastAPI() 
 
-origins = ['http://localhost:3000']
+origins = ['http://localhost:3000' , 'https://jwt-auth-fastapi-react.netlify.app']
 
 app.add_middleware(
     CORSMiddleware,
