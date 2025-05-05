@@ -1,3 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code settings
+.vscode/
+
+# Virtual environment
 venv/
-helper.txt
+env/
+ENV/
+.venv/
+.ENV/
+
+# macOS and Linux crap
+.DS_Store
+*.swp
+
+# Test coverage
+htmlcov/
+.coverage
+.tox/
+.nox/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Log files
+*.log
+
+# Environment variable files
+.env
+.env.*
+
+# Mongo dump files
+*.bson
+*.json
+
+# PyInstaller
+*.spec
+build/
+dist/
+
+# Mypy, Pylint, etc.
+.mypy_cache/
+.pytest_cache/
+coverage.xml
+pylint-report.txt
+
+# SQLite, if using
+*.sqlite3
+
+# Node (if mixing with frontend)
 node_modules/
+npm-debug.log*
+
+# Ignore generated docs
+/docs/_build/
